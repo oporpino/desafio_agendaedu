@@ -19,5 +19,3 @@ test:
   script:
     - yarn install # Install all dependencies
     - yarn test:final # Test for prod
-  only:
-    - master # Only run on master branch
