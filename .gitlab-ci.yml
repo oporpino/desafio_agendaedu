@@ -13,15 +13,11 @@ before_script:
 cache:
   paths:
     - node_modules/
-    - .yarn
 
 test:
   stage: test
   script:
     - yarn install # Install all dependencies
     - yarn test:final # Test for prod
-  artifacts:
-    paths:
-      - public # The built files for Gitlab Pages to serve
   only:
     - master # Only run on master branch
