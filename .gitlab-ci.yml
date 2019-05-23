@@ -19,7 +19,7 @@ test:
   stage: test
   script:
     - yarn install # Install all dependencies
-    - yarn test # Test for prod
+    - yarn test:final # Test for prod
   artifacts:
     paths:
       - public # The built files for Gitlab Pages to serve
