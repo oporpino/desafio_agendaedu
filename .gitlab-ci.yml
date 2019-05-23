@@ -15,13 +15,11 @@ cache:
     - node_modules/
     - .yarn
 
-pages:
-  stage: deploy
+test:
+  stage: test
   script:
     - yarn install # Install all dependencies
-    - yarn build # Build for prod
-    - mv public _public # CRA and gitlab pages both use the public folder. Only do this in a build pipeline.
-    - mv build public # Move build files to public dir for Gitlab Pages
+    - yarn test # Test for prod
   artifacts:
     paths:
       - public # The built files for Gitlab Pages to serve
