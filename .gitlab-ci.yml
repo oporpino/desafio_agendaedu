@@ -1,0 +1,29 @@
+image: node:10.15.3
+
+variables:
+  PUBLIC_URL: /desafio_agendaedu
+
+stages:
+  - test
+
+before_script:
+  # Install yarn as outlined in (https://yarnpkg.com/lang/en/docs/install/#alternatives-stable)
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+
+cache:
+  paths:
+    - node_modules/
+    - .yarn
+
+pages:
+  stage: deploy
+  script:
+    - yarn install # Install all dependencies
+    - yarn build # Build for prod
+    - mv public _public # CRA and gitlab pages both use the public folder. Only do this in a build pipeline.
+    - mv build public # Move build files to public dir for Gitlab Pages
+  artifacts:
+    paths:
+      - public # The built files for Gitlab Pages to serve
+  only:
+    - master # Only run on master branch
