@@ -25,7 +25,8 @@ export default class App extends Component {
     await Font.loadAsync({
       'sf-pro-display-regular': require('./assets/fonts/sf-pro-display-regular.otf'),
       'sf-pro-display-bold': require('./assets/fonts/sf-pro-display-bold.otf'),
-      'sf-pro-display-semibold': require('./assets/fonts/sf-pro-display-semibold.otf')
+      'sf-pro-display-semibold': require('./assets/fonts/sf-pro-display-semibold.otf'),
+      'sf-pro-display-ultralight': require('./assets/fonts/sf-pro-display-ultralight.otf')
     });
 
     this.setState({ fontLoaded: true });
