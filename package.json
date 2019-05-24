@@ -25,6 +25,7 @@
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.0",
     "enzyme-to-json": "^3.3.5",
+    "husky": "^2.3.0",
     "jest-enzyme": "^7.0.2",
     "jest-expo": "^32.0.1",
     "react-test-renderer": "^16.8.6"
@@ -48,6 +49,12 @@
       "!**/babel.config.js",
       "!**/jest.setup.js"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test:final",
+      "pre-push": "yarn test:final"
+    }
   },
   "private": true
 }
