@@ -1,3 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<App /> has only 1 child 1`] = `<NavigationContainer />`;
+exports[`<App /> has only 1 child 1`] = `
+<AppLoading
+  onFinish={[Function]}
+  startAsync={[Function]}
+/>
+`;
