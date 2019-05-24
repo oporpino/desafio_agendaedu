@@ -14,7 +14,8 @@ const common = StyleSheet.create({
     paddingRight: 20,
     paddingTop: 13,
     paddingBottom: 13,
-    color: '#333333'
+    color: '#333333',
+    fontFamily: 'sf-pro-display-regular'
   }
 });
 

@@ -34,6 +34,7 @@ exports[`<Login /> has login button 1`] = `
           Object {
             "alignSelf": "stretch",
             "color": "#333333",
+            "fontFamily": "sf-pro-display-bold",
             "fontSize": 36,
             "fontWeight": "bold",
           }
@@ -54,6 +55,7 @@ exports[`<Login /> has login button 1`] = `
         style={
           Object {
             "color": "#666666",
+            "fontFamily": "sf-pro-display-regular",
             "marginBottom": 8,
           }
         }
@@ -76,6 +78,7 @@ exports[`<Login /> has login button 1`] = `
               "borderRadius": 5,
               "borderWidth": 1,
               "color": "#333333",
+              "fontFamily": "sf-pro-display-regular",
               "height": 50,
               "paddingBottom": 13,
               "paddingLeft": 20,
@@ -112,6 +115,7 @@ exports[`<Login /> has login button 1`] = `
         style={
           Object {
             "color": "#666666",
+            "fontFamily": "sf-pro-display-regular",
             "marginBottom": 8,
           }
         }
@@ -128,12 +132,14 @@ exports[`<Login /> has login button 1`] = `
         <TextInput
           allowFontScaling={true}
           id="passwordInput"
+          secureTextEntry={true}
           style={
             Object {
               "borderColor": "#ABB1B7",
               "borderRadius": 5,
               "borderWidth": 1,
               "color": "#333333",
+              "fontFamily": "sf-pro-display-regular",
               "height": 50,
               "paddingBottom": 13,
               "paddingLeft": 20,
@@ -231,6 +237,7 @@ exports[`<Login /> has login input 1`] = `
           Object {
             "alignSelf": "stretch",
             "color": "#333333",
+            "fontFamily": "sf-pro-display-bold",
             "fontSize": 36,
             "fontWeight": "bold",
           }
@@ -251,6 +258,7 @@ exports[`<Login /> has login input 1`] = `
         style={
           Object {
             "color": "#666666",
+            "fontFamily": "sf-pro-display-regular",
             "marginBottom": 8,
           }
         }
@@ -273,6 +281,7 @@ exports[`<Login /> has login input 1`] = `
               "borderRadius": 5,
               "borderWidth": 1,
               "color": "#333333",
+              "fontFamily": "sf-pro-display-regular",
               "height": 50,
               "paddingBottom": 13,
               "paddingLeft": 20,
@@ -309,6 +318,7 @@ exports[`<Login /> has login input 1`] = `
         style={
           Object {
             "color": "#666666",
+            "fontFamily": "sf-pro-display-regular",
             "marginBottom": 8,
           }
         }
@@ -325,12 +335,14 @@ exports[`<Login /> has login input 1`] = `
         <TextInput
           allowFontScaling={true}
           id="passwordInput"
+          secureTextEntry={true}
           style={
             Object {
               "borderColor": "#ABB1B7",
               "borderRadius": 5,
               "borderWidth": 1,
               "color": "#333333",
+              "fontFamily": "sf-pro-display-regular",
               "height": 50,
               "paddingBottom": 13,
               "paddingLeft": 20,
@@ -428,6 +440,7 @@ exports[`<Login /> has password input 1`] = `
           Object {
             "alignSelf": "stretch",
             "color": "#333333",
+            "fontFamily": "sf-pro-display-bold",
             "fontSize": 36,
             "fontWeight": "bold",
           }
@@ -448,6 +461,7 @@ exports[`<Login /> has password input 1`] = `
         style={
           Object {
             "color": "#666666",
+            "fontFamily": "sf-pro-display-regular",
             "marginBottom": 8,
           }
         }
@@ -470,6 +484,7 @@ exports[`<Login /> has password input 1`] = `
               "borderRadius": 5,
               "borderWidth": 1,
               "color": "#333333",
+              "fontFamily": "sf-pro-display-regular",
               "height": 50,
               "paddingBottom": 13,
               "paddingLeft": 20,
@@ -506,6 +521,7 @@ exports[`<Login /> has password input 1`] = `
         style={
           Object {
             "color": "#666666",
+            "fontFamily": "sf-pro-display-regular",
             "marginBottom": 8,
           }
         }
@@ -522,12 +538,14 @@ exports[`<Login /> has password input 1`] = `
         <TextInput
           allowFontScaling={true}
           id="passwordInput"
+          secureTextEntry={true}
           style={
             Object {
               "borderColor": "#ABB1B7",
               "borderRadius": 5,
               "borderWidth": 1,
               "color": "#333333",
+              "fontFamily": "sf-pro-display-regular",
               "height": 50,
               "paddingBottom": 13,
               "paddingLeft": 20,

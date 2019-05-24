@@ -5,7 +5,7 @@ import { View, TextInput, StyleSheet } from 'react-native';
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import { common, buttons } from '../styles/common';
+import { common } from '../styles/common';
 
 export default class Login extends Component {
   render() {
@@ -15,6 +15,7 @@ export default class Login extends Component {
           <View style={styles.title}>
             <Text style={styles.titleText}>Faça seu login 🔑</Text>
           </View>
+
           <View style={styles.inputGroup}>
             <Text style={styles.label}>E-mail ou usuário</Text>
             <View sytle={styles.inputIconGroup}>
@@ -29,7 +30,11 @@ export default class Login extends Component {
           <View style={styles.inputGroup}>
             <Text style={styles.label}>Senha</Text>
             <View sytle={styles.inputIconGroup}>
-              <TextInput id="passwordInput" style={styles.passwordInput} />
+              <TextInput
+                id="passwordInput"
+                secureTextEntry={true}
+                style={styles.passwordInput}
+              />
               <MaterialCommunityIcons
                 style={styles.icon}
                 name="eye-off-outline"
@@ -62,7 +67,8 @@ const styles = StyleSheet.create({
     fontSize: 36,
     fontWeight: 'bold',
     color: '#333333',
-    alignSelf: 'stretch'
+    alignSelf: 'stretch',
+    fontFamily: 'sf-pro-display-bold'
   },
   form: {
     flex: 3,
@@ -73,8 +79,8 @@ const styles = StyleSheet.create({
   },
   label: {
     color: '#666666',
-    marginBottom: 8
-    //fontFamily: 'SFProDisplay' #todo
+    marginBottom: 8,
+    fontFamily: 'sf-pro-display-regular'
   },
   inputGroup: {
     alignSelf: 'stretch',
