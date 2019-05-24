@@ -13,12 +13,19 @@
   "dependencies": {
     "expo": "^32.0.0",
     "jest": "^24.8.0",
+    "jest-serializer-enzyme": "^1.0.0",
     "react": "16.5.0",
+    "react-addons-test-utils": "^15.6.2",
+    "react-dom": "^16.8.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "react-navigation": "^3.11.0"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.13.0",
+    "enzyme-to-json": "^3.3.5",
+    "jest-enzyme": "^7.0.2",
     "jest-expo": "^32.0.1",
     "react-test-renderer": "^16.8.6"
   },
@@ -26,6 +33,12 @@
     "preset": "jest-expo",
     "transformIgnorePatterns": [
       "node_modules/(?!((jest-)?react-native|react-clone-referenced-element|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|sentry-expo|native-base))"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
     ],
     "collectCoverage": true,
     "collectCoverageFrom": [
