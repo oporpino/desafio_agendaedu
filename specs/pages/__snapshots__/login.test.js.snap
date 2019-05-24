@@ -1,185 +1,592 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Login /> has login input 1`] = `
-<Component>
+exports[`<Login /> has login button 1`] = `
+<Component
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
   <Component
     style={
       Object {
-        "padding": 20,
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "flex": 3,
+        "justifyContent": "center",
+        "padding": 24,
       }
     }
   >
     <Component
       style={
         Object {
-          "height": 74,
-          "marginTop": 17,
+          "alignSelf": "stretch",
+          "marginBottom": 36,
         }
       }
     >
-      <Component
+      <Styled(Text)
         style={
           Object {
-            "color": "#666666",
-          }
-        }
-      >
-        E-mail ou usuário
-      </Component>
-      <TextInput
-        allowFontScaling={true}
-        id="emailInput"
-        style={
-          Object {
-            "borderColor": "#733DBE",
-            "borderRadius": 5,
-            "borderWidth": 1,
+            "alignSelf": "stretch",
             "color": "#333333",
-            "height": 50,
-            "marginTop": 8,
-            "paddingBottom": 13,
-            "paddingLeft": 20,
-            "paddingRight": 20,
-            "paddingTop": 13,
+            "fontSize": 36,
+            "fontWeight": "bold",
           }
         }
-        underlineColorAndroid="transparent"
       >
-        Login
-      </TextInput>
+        Faça seu login 🔑
+      </Styled(Text)>
     </Component>
     <Component
       style={
         Object {
-          "height": 74,
-          "marginTop": 17,
+          "alignSelf": "stretch",
+          "marginBottom": 17,
         }
       }
     >
-      <Component
+      <Styled(Text)
         style={
           Object {
             "color": "#666666",
+            "marginBottom": 8,
+          }
+        }
+      >
+        E-mail ou usuário
+      </Styled(Text)>
+      <Component
+        sytle={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          id="emailInput"
+          style={
+            Object {
+              "borderColor": "#733DBE",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "color": "#333333",
+              "height": 50,
+              "paddingBottom": 13,
+              "paddingLeft": 20,
+              "paddingRight": 20,
+              "paddingTop": 13,
+            }
+          }
+          underlineColorAndroid="transparent"
+        />
+        <Icon
+          allowFontScaling={false}
+          name="email-outline"
+          size={24}
+          style={
+            Object {
+              "alignSelf": "flex-end",
+              "color": "#AAAAAA",
+              "marginRight": 15,
+              "marginTop": -37,
+            }
+          }
+        />
+      </Component>
+    </Component>
+    <Component
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "marginBottom": 17,
+        }
+      }
+    >
+      <Styled(Text)
+        style={
+          Object {
+            "color": "#666666",
+            "marginBottom": 8,
           }
         }
       >
         Senha
-      </Component>
-      <TextInput
-        allowFontScaling={true}
-        id="passwordInput"
-        style={
-          Array [
-            undefined,
+      </Styled(Text)>
+      <Component
+        sytle={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          id="passwordInput"
+          style={
             Object {
               "borderColor": "#ABB1B7",
               "borderRadius": 5,
               "borderWidth": 1,
               "color": "#333333",
               "height": 50,
-              "marginTop": 8,
               "paddingBottom": 13,
               "paddingLeft": 20,
               "paddingRight": 20,
               "paddingTop": 13,
-            },
-          ]
-        }
-        underlineColorAndroid="transparent"
-      />
+            }
+          }
+          underlineColorAndroid="transparent"
+        />
+        <Icon
+          allowFontScaling={false}
+          name="eye-off-outline"
+          size={24}
+          style={
+            Object {
+              "alignSelf": "flex-end",
+              "color": "#AAAAAA",
+              "marginRight": 15,
+              "marginTop": -37,
+            }
+          }
+        />
+      </Component>
     </Component>
+  </Component>
+  <Component
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "padding": 30,
+      }
+    }
+  >
+    <Styled(Button)
+      id="loginButton"
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "stretch",
+          "backgroundColor": "#733DBE",
+          "borderRadius": 5,
+          "height": 50,
+          "justifyContent": "center",
+          "marginBottom": 40,
+          "paddingBottom": 16,
+          "paddingTop": 16,
+        }
+      }
+    >
+      <Styled(Text)
+        style={
+          Object {
+            "fontWeight": "600",
+          }
+        }
+      >
+        Entrar
+      </Styled(Text)>
+    </Styled(Button)>
+  </Component>
+</Component>
+`;
+
+exports[`<Login /> has login input 1`] = `
+<Component
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Component
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "flex": 3,
+        "justifyContent": "center",
+        "padding": 24,
+      }
+    }
+  >
+    <Component
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "marginBottom": 36,
+        }
+      }
+    >
+      <Styled(Text)
+        style={
+          Object {
+            "alignSelf": "stretch",
+            "color": "#333333",
+            "fontSize": 36,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Faça seu login 🔑
+      </Styled(Text)>
+    </Component>
+    <Component
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "marginBottom": 17,
+        }
+      }
+    >
+      <Styled(Text)
+        style={
+          Object {
+            "color": "#666666",
+            "marginBottom": 8,
+          }
+        }
+      >
+        E-mail ou usuário
+      </Styled(Text)>
+      <Component
+        sytle={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          id="emailInput"
+          style={
+            Object {
+              "borderColor": "#733DBE",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "color": "#333333",
+              "height": 50,
+              "paddingBottom": 13,
+              "paddingLeft": 20,
+              "paddingRight": 20,
+              "paddingTop": 13,
+            }
+          }
+          underlineColorAndroid="transparent"
+        />
+        <Icon
+          allowFontScaling={false}
+          name="email-outline"
+          size={24}
+          style={
+            Object {
+              "alignSelf": "flex-end",
+              "color": "#AAAAAA",
+              "marginRight": 15,
+              "marginTop": -37,
+            }
+          }
+        />
+      </Component>
+    </Component>
+    <Component
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "marginBottom": 17,
+        }
+      }
+    >
+      <Styled(Text)
+        style={
+          Object {
+            "color": "#666666",
+            "marginBottom": 8,
+          }
+        }
+      >
+        Senha
+      </Styled(Text)>
+      <Component
+        sytle={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          id="passwordInput"
+          style={
+            Object {
+              "borderColor": "#ABB1B7",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "color": "#333333",
+              "height": 50,
+              "paddingBottom": 13,
+              "paddingLeft": 20,
+              "paddingRight": 20,
+              "paddingTop": 13,
+            }
+          }
+          underlineColorAndroid="transparent"
+        />
+        <Icon
+          allowFontScaling={false}
+          name="eye-off-outline"
+          size={24}
+          style={
+            Object {
+              "alignSelf": "flex-end",
+              "color": "#AAAAAA",
+              "marginRight": 15,
+              "marginTop": -37,
+            }
+          }
+        />
+      </Component>
+    </Component>
+  </Component>
+  <Component
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "padding": 30,
+      }
+    }
+  >
+    <Styled(Button)
+      id="loginButton"
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "stretch",
+          "backgroundColor": "#733DBE",
+          "borderRadius": 5,
+          "height": 50,
+          "justifyContent": "center",
+          "marginBottom": 40,
+          "paddingBottom": 16,
+          "paddingTop": 16,
+        }
+      }
+    >
+      <Styled(Text)
+        style={
+          Object {
+            "fontWeight": "600",
+          }
+        }
+      >
+        Entrar
+      </Styled(Text)>
+    </Styled(Button)>
   </Component>
 </Component>
 `;
 
 exports[`<Login /> has password input 1`] = `
-<Component>
+<Component
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
   <Component
     style={
       Object {
-        "padding": 20,
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "flex": 3,
+        "justifyContent": "center",
+        "padding": 24,
       }
     }
   >
     <Component
       style={
         Object {
-          "height": 74,
-          "marginTop": 17,
+          "alignSelf": "stretch",
+          "marginBottom": 36,
         }
       }
     >
-      <Component
+      <Styled(Text)
         style={
           Object {
-            "color": "#666666",
-          }
-        }
-      >
-        E-mail ou usuário
-      </Component>
-      <TextInput
-        allowFontScaling={true}
-        id="emailInput"
-        style={
-          Object {
-            "borderColor": "#733DBE",
-            "borderRadius": 5,
-            "borderWidth": 1,
+            "alignSelf": "stretch",
             "color": "#333333",
-            "height": 50,
-            "marginTop": 8,
-            "paddingBottom": 13,
-            "paddingLeft": 20,
-            "paddingRight": 20,
-            "paddingTop": 13,
+            "fontSize": 36,
+            "fontWeight": "bold",
           }
         }
-        underlineColorAndroid="transparent"
       >
-        Login
-      </TextInput>
+        Faça seu login 🔑
+      </Styled(Text)>
     </Component>
     <Component
       style={
         Object {
-          "height": 74,
-          "marginTop": 17,
+          "alignSelf": "stretch",
+          "marginBottom": 17,
         }
       }
     >
-      <Component
+      <Styled(Text)
         style={
           Object {
             "color": "#666666",
+            "marginBottom": 8,
+          }
+        }
+      >
+        E-mail ou usuário
+      </Styled(Text)>
+      <Component
+        sytle={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          id="emailInput"
+          style={
+            Object {
+              "borderColor": "#733DBE",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "color": "#333333",
+              "height": 50,
+              "paddingBottom": 13,
+              "paddingLeft": 20,
+              "paddingRight": 20,
+              "paddingTop": 13,
+            }
+          }
+          underlineColorAndroid="transparent"
+        />
+        <Icon
+          allowFontScaling={false}
+          name="email-outline"
+          size={24}
+          style={
+            Object {
+              "alignSelf": "flex-end",
+              "color": "#AAAAAA",
+              "marginRight": 15,
+              "marginTop": -37,
+            }
+          }
+        />
+      </Component>
+    </Component>
+    <Component
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "marginBottom": 17,
+        }
+      }
+    >
+      <Styled(Text)
+        style={
+          Object {
+            "color": "#666666",
+            "marginBottom": 8,
           }
         }
       >
         Senha
-      </Component>
-      <TextInput
-        allowFontScaling={true}
-        id="passwordInput"
-        style={
-          Array [
-            undefined,
+      </Styled(Text)>
+      <Component
+        sytle={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          id="passwordInput"
+          style={
             Object {
               "borderColor": "#ABB1B7",
               "borderRadius": 5,
               "borderWidth": 1,
               "color": "#333333",
               "height": 50,
-              "marginTop": 8,
               "paddingBottom": 13,
               "paddingLeft": 20,
               "paddingRight": 20,
               "paddingTop": 13,
-            },
-          ]
-        }
-        underlineColorAndroid="transparent"
-      />
+            }
+          }
+          underlineColorAndroid="transparent"
+        />
+        <Icon
+          allowFontScaling={false}
+          name="eye-off-outline"
+          size={24}
+          style={
+            Object {
+              "alignSelf": "flex-end",
+              "color": "#AAAAAA",
+              "marginRight": 15,
+              "marginTop": -37,
+            }
+          }
+        />
+      </Component>
     </Component>
+  </Component>
+  <Component
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "padding": 30,
+      }
+    }
+  >
+    <Styled(Button)
+      id="loginButton"
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "stretch",
+          "backgroundColor": "#733DBE",
+          "borderRadius": 5,
+          "height": 50,
+          "justifyContent": "center",
+          "marginBottom": 40,
+          "paddingBottom": 16,
+          "paddingTop": 16,
+        }
+      }
+    >
+      <Styled(Text)
+        style={
+          Object {
+            "fontWeight": "600",
+          }
+        }
+      >
+        Entrar
+      </Styled(Text)>
+    </Styled(Button)>
   </Component>
 </Component>
 `;

@@ -7,7 +7,6 @@ const common = StyleSheet.create({
     flexWrap: 'wrap'
   },
   textInput: {
-    marginTop: 8,
     borderWidth: 1,
     borderRadius: 5,
     height: 50,

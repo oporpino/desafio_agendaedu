@@ -18,4 +18,10 @@ describe('<Login />', () => {
 
     expect(login).toMatchSnapshot();
   });
+
+  it('has login button', () => {
+    expect(toJson(login.find('#loginButton'))).not.toBe(null);
+
+    expect(login).toMatchSnapshot();
+  });
 });
