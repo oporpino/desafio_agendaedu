@@ -31,4 +31,10 @@ const buttons = StyleSheet.create({
   }
 });
 
-export { common, buttons };
+const messages = StyleSheet.create({
+  error: {
+    color: 'red'
+  }
+});
+
+export { common, buttons, messages };

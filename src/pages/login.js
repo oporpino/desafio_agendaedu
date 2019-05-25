@@ -5,9 +5,57 @@ import { View, TextInput, StyleSheet } from 'react-native';
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import { common } from '../styles/common';
+import { common, messages } from '../styles/common';
+
+import api from '../services/api';
+import adapter from 'axios/lib/adapters/http';
 
 export default class Login extends Component {
+  state = {
+    token: null,
+    message: null,
+    email: null,
+    password: null,
+    loginPassed: false
+  };
+
+  login = async () => {
+    this.clear();
+    try {
+      const response = await api.post(
+        '/login',
+        {
+          email: this.state.email,
+          password: this.state.password
+        },
+        { adapter }
+      );
+
+      this.setState({
+        message: response.data.token
+      });
+      this.afterLogin();
+    } catch (error) {
+      this.setState({
+        message: 'E-mail ou senha incorretos'
+      });
+    }
+  };
+
+  afterLogin = () => {
+    this.setState({
+      loginPassed: true
+    });
+
+    this.props.navigation.navigate('Main');
+  };
+
+  clear = () => {
+    this.setState({
+      message: null
+    });
+  };
+
   render() {
     return (
       <View style={styles.container}>
@@ -19,7 +67,11 @@ export default class Login extends Component {
           <View style={styles.inputGroup}>
             <Text style={styles.label}>E-mail ou usuário</Text>
             <View sytle={styles.inputIconGroup}>
-              <TextInput id="emailInput" style={styles.emailInput} />
+              <TextInput
+                id="emailInput"
+                style={styles.emailInput}
+                onChangeText={email => this.setState({ email })}
+              />
               <MaterialCommunityIcons
                 style={styles.icon}
                 name="email-outline"
@@ -34,6 +86,7 @@ export default class Login extends Component {
                 id="passwordInput"
                 secureTextEntry={true}
                 style={styles.passwordInput}
+                onChangeText={password => this.setState({ password })}
               />
               <MaterialCommunityIcons
                 style={styles.icon}
@@ -42,9 +95,13 @@ export default class Login extends Component {
               />
             </View>
           </View>
+
+          {this.state.message != null ? (
+            <Text style={messages.error}>{this.state.message}</Text>
+          ) : null}
         </View>
         <View style={styles.buttonsGroup}>
-          <Button id="loginButton" style={styles.button}>
+          <Button id="loginButton" style={styles.button} onPress={this.login}>
             <Text style={styles.buttonText}>Entrar</Text>
           </Button>
         </View>

@@ -13,6 +13,7 @@
     "update:snapshots": "jest -u --coverage=false"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "expo": "^32.0.0",
     "jest": "^24.8.0",
     "jest-serializer-enzyme": "^1.0.0",
@@ -30,8 +31,7 @@
     "enzyme-to-json": "^3.3.5",
     "husky": "^2.3.0",
     "jest-enzyme": "^7.0.2",
-    "jest-expo": "^32.0.1",
-    "react-test-renderer": "^16.8.6"
+    "jest-expo": "^32.0.1"
   },
   "jest": {
     "preset": "jest-expo",
@@ -44,6 +44,7 @@
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
+    "testEnvironment": "node",
     "collectCoverage": true,
     "collectCoverageFrom": [
       "**/*.{js,jsx}",

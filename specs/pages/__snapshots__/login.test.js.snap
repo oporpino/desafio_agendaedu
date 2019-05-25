@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Login /> has login button 1`] = `
+exports[`<Login /> inputs has login button 1`] = `
 <Component
   style={
     Object {
@@ -72,6 +72,7 @@ exports[`<Login /> has login button 1`] = `
         <TextInput
           allowFontScaling={true}
           id="emailInput"
+          onChangeText={[Function]}
           style={
             Object {
               "borderColor": "#733DBE",
@@ -132,6 +133,7 @@ exports[`<Login /> has login button 1`] = `
         <TextInput
           allowFontScaling={true}
           id="passwordInput"
+          onChangeText={[Function]}
           secureTextEntry={true}
           style={
             Object {
@@ -175,6 +177,7 @@ exports[`<Login /> has login button 1`] = `
   >
     <Styled(Button)
       id="loginButton"
+      onPress={[Function]}
       style={
         Object {
           "alignItems": "center",
@@ -203,7 +206,7 @@ exports[`<Login /> has login button 1`] = `
 </Component>
 `;
 
-exports[`<Login /> has login input 1`] = `
+exports[`<Login /> inputs has login input 1`] = `
 <Component
   style={
     Object {
@@ -275,6 +278,7 @@ exports[`<Login /> has login input 1`] = `
         <TextInput
           allowFontScaling={true}
           id="emailInput"
+          onChangeText={[Function]}
           style={
             Object {
               "borderColor": "#733DBE",
@@ -335,6 +339,7 @@ exports[`<Login /> has login input 1`] = `
         <TextInput
           allowFontScaling={true}
           id="passwordInput"
+          onChangeText={[Function]}
           secureTextEntry={true}
           style={
             Object {
@@ -378,6 +383,7 @@ exports[`<Login /> has login input 1`] = `
   >
     <Styled(Button)
       id="loginButton"
+      onPress={[Function]}
       style={
         Object {
           "alignItems": "center",
@@ -406,7 +412,7 @@ exports[`<Login /> has login input 1`] = `
 </Component>
 `;
 
-exports[`<Login /> has password input 1`] = `
+exports[`<Login /> inputs has password input 1`] = `
 <Component
   style={
     Object {
@@ -478,6 +484,7 @@ exports[`<Login /> has password input 1`] = `
         <TextInput
           allowFontScaling={true}
           id="emailInput"
+          onChangeText={[Function]}
           style={
             Object {
               "borderColor": "#733DBE",
@@ -538,6 +545,7 @@ exports[`<Login /> has password input 1`] = `
         <TextInput
           allowFontScaling={true}
           id="passwordInput"
+          onChangeText={[Function]}
           secureTextEntry={true}
           style={
             Object {
@@ -581,6 +589,7 @@ exports[`<Login /> has password input 1`] = `
   >
     <Styled(Button)
       id="loginButton"
+      onPress={[Function]}
       style={
         Object {
           "alignItems": "center",
