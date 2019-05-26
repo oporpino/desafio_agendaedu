@@ -3,39 +3,40 @@ import React, { Component } from 'react';
 import { Text } from 'native-base';
 import { Image, View, StyleSheet, Dimensions } from 'react-native';
 
-import api from '../services/api';
+import moment from '../handlers/moment';
 
 export default class Details extends Component {
-  static navigationOptions = {};
+  state = {
+    event: null
+  };
+
+  componetDidMount() {}
 
   render() {
-    console.log(Dimensions.get('window').width);
+    const { navigation } = this.props;
+    const event = navigation.getParam('event', null);
 
     return (
       <View style={styles.container}>
-        <Image
-          style={styles.image}
-          source={{
-            uri: 'https://via.placeholder.com/350x260'
-          }}
-        />
+        <Image style={styles.image} source={{ uri: event.image }} />
 
         <View style={styles.content}>
           <View style={styles.firstRow}>
             <View style={styles.dateBox}>
-              <Text style={styles.day}>25</Text>
-              <Text style={styles.month}>JAN</Text>
+              <Text style={styles.day}>
+                {moment(event.startAt).format('DD')}
+              </Text>
+              <Text style={styles.month}>
+                {moment(event.startAt)
+                  .format('MMM')
+                  .toUpperCase()}
+              </Text>
             </View>
 
-            <Text style={styles.title}>
-              Exposição de telas no museu de fotografia
-            </Text>
+            <Text style={styles.title}>{event.title}</Text>
           </View>
           <View style={styles.secondRow}>
-            <Text style={styles.descriptionBox}>
-              askd askldh alksjdaks da sd as d jas dashd a sda sdk ja sd ahsd
-              asd a sd a sd a sdhasd ashdajksdjk
-            </Text>
+            <Text style={styles.descriptionBox}>{event.description}</Text>
           </View>
         </View>
       </View>

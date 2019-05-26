@@ -8,13 +8,14 @@ import { Entypo as Icon } from '@expo/vector-icons';
 import moment from '../handlers/moment';
 
 export default class Event extends Component {
-  details = () => {
-    this.props.navigation.navigate('Details');
-  };
   render() {
     const props = this.props;
     return (
-      <TouchableOpacity onPress={this.details}>
+      <TouchableOpacity
+        onPress={() => {
+          this.props.navigation.navigate('Details', { event: props.item });
+        }}
+      >
         <View style={styles.event}>
           <View style={styles.borderLine} />
           {props.item.image ? (
