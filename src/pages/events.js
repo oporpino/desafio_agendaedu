@@ -10,12 +10,14 @@ import { FlatList } from 'react-native-gesture-handler';
 import moment from '../handlers/moment';
 import Group from '../components/group';
 
-import api from '../services/api';
+import AgendaEdu from '../services/api';
 
 export default class Events extends Component {
   state = {
-    events: [],
-    groups: []
+    groups: [],
+    limit: 10,
+    page: 1,
+    metadata: null
   };
 
   static navigationOptions = {
@@ -32,37 +34,27 @@ export default class Events extends Component {
     this.loadEvents();
   }
 
-  loadEvents = async () => {
+  loadEvents = async (page = 1) => {
     const token = await AsyncStorage.getItem('user_token');
 
-    const response = await api.get('/events?limit=20;page=5', {
-      headers: { 'Content-Type': 'application/json', token: token }
+    AgendaEdu.initialize(token);
+
+    const { data, metadata } = await AgendaEdu.events({
+      limit: this.state.limit,
+      page: page
     });
 
-    const events = response.data.data;
+    const groups = AgendaEdu.combine(data, this.state.groups);
 
-    //TODO: remove to service layer
-    const groups = [];
-    events.map(event => {
-      let found = false;
-      let eventDay = moment.unix(Date.parse(event.startAt));
+    this.setState({ groups: groups, metadata, page });
+  };
 
-      groups.map(group => {
-        if (eventDay.isSame(group.day, 'day')) {
-          group.events.push(event);
-          found = true;
-          return;
-        }
-      });
-      if (!found) {
-        groups.push({
-          day: eventDay,
-          events: [event]
-        });
-      }
-    });
+  loadMore = () => {
+    const { page, metadata } = this.state;
 
-    this.setState({ groups: groups });
+    if (page === metadata.total_pages) return;
+
+    this.loadEvents(page + 1);
   };
 
   renderItem = ({ item }) => (
@@ -77,6 +69,8 @@ export default class Events extends Component {
           data={groups}
           keyExtractor={item => item.day.toString()}
           renderItem={this.renderItem}
+          onEndReached={this.loadMore}
+          onEndReachedThreshold={0.3}
         />
       </View>
     );
