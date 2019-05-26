@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Group /> render all events 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "alignContent": "center",
+        "flexDirection": "row",
+        "marginBottom": 19,
+        "marginLeft": 24,
+        "marginRight": 24,
+        "marginTop": 19,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontFamily": "System",
+            "fontSize": 16,
+          },
+          Object {
+            "color": "#999999",
+            "marginRight": 16,
+          },
+        ]
+      }
+      uppercase={false}
+    >
+      Segunda, 22 de Julho
+    </Text>
+    <View
+      style={
+        Object {
+          "borderBottomColor": "#733DBE",
+          "borderBottomWidth": 1,
+          "flex": 1,
+          "opacity": 0.15,
+          "width": 1,
+        }
+      }
+    />
+  </View>
+  <View
+    data={
+      Array [
+        Object {
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium nulla non arcu aliquam rhoncus eu sed leo. Aenean cursus nibh sit amet fringilla sodales. Vestibulum faucibus venenatis tempor. Morbi placerat ac massa id ultricies.",
+          "id": 1,
+          "image": "https://s3-us-west-2.amazonaws.com/agendaedu-dev/schools/c5c1a933-cdef-4c9b-8a87-490f25c2538d/events/5380/attachments/1550866911-$1-original-poster-agendakids.jpeg",
+          "startAt": "2019-07-22T19:01:33.476Z",
+          "title": "Event 1",
+        },
+        Object {
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium nulla non arcu aliquam rhoncus eu sed leo. Aenean cursus nibh sit amet fringilla sodales. Vestibulum faucibus venenatis tempor. Morbi placerat ac massa id ultricies.",
+          "id": 2,
+          "image": "https://s3-us-west-2.amazonaws.com/agendaedu-dev/schools/c5c1a933-cdef-4c9b-8a87-490f25c2538d/events/5380/attachments/1550866911-$1-original-poster-agendakids.jpeg",
+          "startAt": "2019-07-22T19:01:33.476Z",
+          "title": "Event 2",
+        },
+        Object {
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium nulla non arcu aliquam rhoncus eu sed leo. Aenean cursus nibh sit amet fringilla sodales. Vestibulum faucibus venenatis tempor. Morbi placerat ac massa id ultricies.",
+          "id": 3,
+          "image": "https://s3-us-west-2.amazonaws.com/agendaedu-dev/schools/c5c1a933-cdef-4c9b-8a87-490f25c2538d/events/5380/attachments/1550866911-$1-original-poster-agendakids.jpeg",
+          "startAt": "2019-07-22T19:01:33.476Z",
+          "title": "Event 3",
+        },
+      ]
+    }
+    keyExtractor={[Function]}
+    renderItem={[Function]}
+  />
+</View>
+`;
