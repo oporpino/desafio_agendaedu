@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { Text, Button } from 'native-base';
-import { View, TextInput, StyleSheet } from 'react-native';
+import { View, TextInput, StyleSheet, AsyncStorage } from 'react-native';
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -19,6 +19,19 @@ export default class Login extends Component {
     loginPassed: false
   };
 
+  static navigationOptions = {
+    title: 'Login',
+    header: null
+  };
+
+  async componentDidMount() {
+    const token = await AsyncStorage.getItem('user_token');
+
+    if (token != null) {
+      this.afterLogin();
+    }
+  }
+
   login = async () => {
     this.clear();
     try {
@@ -34,6 +47,9 @@ export default class Login extends Component {
       this.setState({
         message: response.data.token
       });
+
+      AsyncStorage.setItem('user_token', response.data.token);
+
       this.afterLogin();
     } catch (error) {
       this.setState({
@@ -43,11 +59,7 @@ export default class Login extends Component {
   };
 
   afterLogin = () => {
-    this.setState({
-      loginPassed: true
-    });
-
-    this.props.navigation.navigate('Main');
+    this.props.navigation.navigate('Events');
   };
 
   clear = () => {

@@ -1,11 +1,11 @@
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 import Login from './pages/login';
-import Main from './pages/main';
+import Events from './pages/events';
 
 const AppNavigator = createStackNavigator({
   Login,
-  Main
+  Events
 });
 
 export default createAppContainer(AppNavigator);

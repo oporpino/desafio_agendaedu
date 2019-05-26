@@ -67,7 +67,7 @@ describe('<Login />', () => {
       button.instance().props.onPress();
 
       expect(wrapper.instance().props.navigation.navigate).toHaveBeenCalledWith(
-        'Main'
+        'Events'
       );
     });
 
