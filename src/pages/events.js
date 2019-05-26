@@ -65,7 +65,9 @@ export default class Events extends Component {
     this.setState({ groups: groups });
   };
 
-  renderItem = ({ item }) => <Group item={item} />;
+  renderItem = ({ item }) => (
+    <Group item={item} navigation={this.props.navigation} />
+  );
 
   render() {
     const groups = this.state.groups;

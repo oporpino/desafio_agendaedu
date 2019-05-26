@@ -1,239 +1,249 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Event /> render with image 1`] = `
-<Component
-  style={
-    Object {
-      "backgroundColor": "#fff",
-      "borderColor": "#fff",
-      "borderRadius": 5,
-      "borderWidth": 1,
-      "flexDirection": "row",
-      "marginBottom": 5,
-      "marginLeft": 24,
-      "marginRight": 24,
-      "marginTop": 5,
-      "shadowColor": "#733DBE",
-      "shadowOffset": Object {
-        "height": 1,
-        "width": 1,
-      },
-      "shadowOpacity": 0.1,
-    }
-  }
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
 >
   <Component
     style={
       Object {
-        "backgroundColor": "#733DBE",
-        "borderBottomLeftRadius": 5,
-        "borderTopLeftRadius": 5,
-        "width": 4,
-      }
-    }
-  />
-  <Component
-    source={
-      Object {
-        "uri": "https://s3-us-west-2.amazonaws.com/agendaedu-dev/schools/c5c1a933-cdef-4c9b-8a87-490f25c2538d/events/5380/attachments/1550866911-$1-original-poster-agendakids.jpeg",
-      }
-    }
-    style={
-      Object {
-        "borderRadius": 10,
-        "height": 92,
-        "marginLeft": 14,
-        "marginTop": 16,
-        "width": 66,
-      }
-    }
-  />
-  <Component
-    style={
-      Object {
-        "paddingBottom": 16,
-        "paddingLeft": 16,
-        "paddingRight": 16,
-        "paddingTop": 16,
+        "backgroundColor": "#fff",
+        "borderColor": "#fff",
+        "borderRadius": 5,
+        "borderWidth": 1,
+        "flexDirection": "row",
+        "marginBottom": 5,
+        "marginLeft": 24,
+        "marginRight": 24,
+        "marginTop": 5,
+        "shadowColor": "#733DBE",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 1,
+        },
+        "shadowOpacity": 0.1,
       }
     }
   >
-    <Styled(Text)
-      style={
-        Object {
-          "color": "#999999",
-          "marginBottom": 12,
-        }
-      }
-    >
-      EVENTOS
-    </Styled(Text)>
-    <Styled(Text)
-      style={
-        Object {
-          "color": "#333333",
-          "fontFamily": "sf-pro-display-medium",
-          "fontSize": 16,
-          "marginBottom": 8,
-        }
-      }
-    >
-      Event 1
-    </Styled(Text)>
     <Component
       style={
         Object {
-          "alignContent": "center",
-          "color": "#666666",
-          "flexDirection": "row",
-          "marginBottom": 12,
+          "backgroundColor": "#733DBE",
+          "borderBottomLeftRadius": 5,
+          "borderTopLeftRadius": 5,
+          "width": 4,
+        }
+      }
+    />
+    <Component
+      source={
+        Object {
+          "uri": "https://s3-us-west-2.amazonaws.com/agendaedu-dev/schools/c5c1a933-cdef-4c9b-8a87-490f25c2538d/events/5380/attachments/1550866911-$1-original-poster-agendakids.jpeg",
+        }
+      }
+      style={
+        Object {
+          "borderRadius": 10,
+          "height": 92,
+          "marginLeft": 14,
+          "marginTop": 16,
+          "width": 66,
+        }
+      }
+    />
+    <Component
+      style={
+        Object {
+          "paddingBottom": 16,
+          "paddingLeft": 16,
+          "paddingRight": 16,
+          "paddingTop": 16,
         }
       }
     >
-      <Icon
-        allowFontScaling={false}
-        name="clock"
-        size={14}
+      <Styled(Text)
         style={
           Object {
-            "color": "#666666",
-            "marginRight": 6,
+            "color": "#999999",
+            "marginBottom": 12,
           }
         }
-      />
+      >
+        EVENTOS
+      </Styled(Text)>
       <Styled(Text)
+        style={
+          Object {
+            "color": "#333333",
+            "fontFamily": "sf-pro-display-medium",
+            "fontSize": 16,
+            "marginBottom": 8,
+          }
+        }
+      >
+        Event 1
+      </Styled(Text)>
+      <Component
         style={
           Object {
             "alignContent": "center",
             "color": "#666666",
-            "fontSize": 14,
+            "flexDirection": "row",
+            "marginBottom": 12,
           }
         }
       >
-        14:00
+        <Icon
+          allowFontScaling={false}
+          name="clock"
+          size={14}
+          style={
+            Object {
+              "color": "#666666",
+              "marginRight": 6,
+            }
+          }
+        />
+        <Styled(Text)
+          style={
+            Object {
+              "alignContent": "center",
+              "color": "#666666",
+              "fontSize": 14,
+            }
+          }
+        >
+          14:00
+        </Styled(Text)>
+      </Component>
+      <Styled(Text)
+        style={
+          Object {
+            "color": "#999999",
+            "fontSize": 12,
+          }
+        }
+      >
+        Segunda, 22 de Julho às 16:01h
       </Styled(Text)>
     </Component>
-    <Styled(Text)
-      style={
-        Object {
-          "color": "#999999",
-          "fontSize": 12,
-        }
-      }
-    >
-      Segunda, 22 de Julho às 16:01h
-    </Styled(Text)>
   </Component>
-</Component>
+</TouchableOpacity>
 `;
 
 exports[`<Event /> render with image 2`] = `
-<Component
-  style={
-    Object {
-      "backgroundColor": "#fff",
-      "borderColor": "#fff",
-      "borderRadius": 5,
-      "borderWidth": 1,
-      "flexDirection": "row",
-      "marginBottom": 5,
-      "marginLeft": 24,
-      "marginRight": 24,
-      "marginTop": 5,
-      "shadowColor": "#733DBE",
-      "shadowOffset": Object {
-        "height": 1,
-        "width": 1,
-      },
-      "shadowOpacity": 0.1,
-    }
-  }
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
 >
   <Component
     style={
       Object {
-        "backgroundColor": "#733DBE",
-        "borderBottomLeftRadius": 5,
-        "borderTopLeftRadius": 5,
-        "width": 4,
-      }
-    }
-  />
-  <Component
-    style={
-      Object {
-        "paddingBottom": 16,
-        "paddingLeft": 16,
-        "paddingRight": 16,
-        "paddingTop": 16,
+        "backgroundColor": "#fff",
+        "borderColor": "#fff",
+        "borderRadius": 5,
+        "borderWidth": 1,
+        "flexDirection": "row",
+        "marginBottom": 5,
+        "marginLeft": 24,
+        "marginRight": 24,
+        "marginTop": 5,
+        "shadowColor": "#733DBE",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 1,
+        },
+        "shadowOpacity": 0.1,
       }
     }
   >
-    <Styled(Text)
-      style={
-        Object {
-          "color": "#999999",
-          "marginBottom": 12,
-        }
-      }
-    >
-      EVENTOS
-    </Styled(Text)>
-    <Styled(Text)
-      style={
-        Object {
-          "color": "#333333",
-          "fontFamily": "sf-pro-display-medium",
-          "fontSize": 16,
-          "marginBottom": 8,
-        }
-      }
-    >
-      Event 1
-    </Styled(Text)>
     <Component
       style={
         Object {
-          "alignContent": "center",
-          "color": "#666666",
-          "flexDirection": "row",
-          "marginBottom": 12,
+          "backgroundColor": "#733DBE",
+          "borderBottomLeftRadius": 5,
+          "borderTopLeftRadius": 5,
+          "width": 4,
+        }
+      }
+    />
+    <Component
+      style={
+        Object {
+          "paddingBottom": 16,
+          "paddingLeft": 16,
+          "paddingRight": 16,
+          "paddingTop": 16,
         }
       }
     >
-      <Icon
-        allowFontScaling={false}
-        name="clock"
-        size={14}
+      <Styled(Text)
         style={
           Object {
-            "color": "#666666",
-            "marginRight": 6,
+            "color": "#999999",
+            "marginBottom": 12,
           }
         }
-      />
+      >
+        EVENTOS
+      </Styled(Text)>
       <Styled(Text)
+        style={
+          Object {
+            "color": "#333333",
+            "fontFamily": "sf-pro-display-medium",
+            "fontSize": 16,
+            "marginBottom": 8,
+          }
+        }
+      >
+        Event 1
+      </Styled(Text)>
+      <Component
         style={
           Object {
             "alignContent": "center",
             "color": "#666666",
-            "fontSize": 14,
+            "flexDirection": "row",
+            "marginBottom": 12,
           }
         }
       >
-        14:00
+        <Icon
+          allowFontScaling={false}
+          name="clock"
+          size={14}
+          style={
+            Object {
+              "color": "#666666",
+              "marginRight": 6,
+            }
+          }
+        />
+        <Styled(Text)
+          style={
+            Object {
+              "alignContent": "center",
+              "color": "#666666",
+              "fontSize": 14,
+            }
+          }
+        >
+          14:00
+        </Styled(Text)>
+      </Component>
+      <Styled(Text)
+        style={
+          Object {
+            "color": "#999999",
+            "fontSize": 12,
+          }
+        }
+      >
+        Segunda, 22 de Julho às 16:01h
       </Styled(Text)>
     </Component>
-    <Styled(Text)
-      style={
-        Object {
-          "color": "#999999",
-          "fontSize": 12,
-        }
-      }
-    >
-      Segunda, 22 de Julho às 16:01h
-    </Styled(Text)>
   </Component>
-</Component>
+</TouchableOpacity>
 `;

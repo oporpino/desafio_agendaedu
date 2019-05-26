@@ -1,42 +1,50 @@
 import React, { Component } from 'react';
 
 import { Text } from 'native-base';
-import { View, Image, StyleSheet } from 'react-native';
+import { View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
 import { Entypo as Icon } from '@expo/vector-icons';
 
 import moment from '../handlers/moment';
 
-const Event = props => (
-  <View style={styles.event}>
-    <View style={styles.borderLine} />
-    {props.item.image ? (
-      <Image
-        style={styles.image}
-        source={{
-          uri: props.item.image
-        }}
-      />
-    ) : null}
+export default class Event extends Component {
+  details = () => {
+    this.props.navigation.navigate('Details');
+  };
+  render() {
+    const props = this.props;
+    return (
+      <TouchableOpacity onPress={this.details}>
+        <View style={styles.event}>
+          <View style={styles.borderLine} />
+          {props.item.image ? (
+            <Image
+              style={styles.image}
+              source={{
+                uri: props.item.image
+              }}
+            />
+          ) : null}
 
-    <View style={styles.itemContent}>
-      <Text style={styles.eventText}>EVENTOS</Text>
-      <Text style={styles.titleItem}>{props.item.title}</Text>
+          <View style={styles.itemContent}>
+            <Text style={styles.eventText}>EVENTOS</Text>
+            <Text style={styles.titleItem}>{props.item.title}</Text>
 
-      <View style={styles.clockGroup}>
-        <Icon name="clock" size={14} style={styles.clockIcon} />
-        <Text style={styles.clockText}>14:00</Text>
-      </View>
-      <Text style={styles.dateText}>
-        {moment(props.item.startAt)
-          .format('dddd, DD [de] MMMM [às] LT[h]')
-          .replace('-feira', '')}
-      </Text>
-    </View>
-  </View>
-);
-
-export default Event;
+            <View style={styles.clockGroup}>
+              <Icon name="clock" size={14} style={styles.clockIcon} />
+              <Text style={styles.clockText}>14:00</Text>
+            </View>
+            <Text style={styles.dateText}>
+              {moment(props.item.startAt)
+                .format('dddd, DD [de] MMMM [às] LT[h]')
+                .replace('-feira', '')}
+            </Text>
+          </View>
+        </View>
+      </TouchableOpacity>
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   clockGroup: {

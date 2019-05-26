@@ -8,7 +8,9 @@ import moment from '../handlers/moment';
 import Event from '../components/event';
 
 export default class Group extends Component {
-  renderItem = ({ item }) => <Event name="event" item={item} />;
+  renderItem = ({ item }) => (
+    <Event item={item} navigation={this.props.navigation} />
+  );
 
   render() {
     const group = this.props.item;
