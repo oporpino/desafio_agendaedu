@@ -1,12 +1,35 @@
 import React, { Component } from 'react';
 
 import { Text } from 'native-base';
-import { Image, View, StyleSheet, Dimensions } from 'react-native';
+import { Feather as Icon } from '@expo/vector-icons';
+
+import {
+  Image,
+  View,
+  StyleSheet,
+  Dimensions,
+  TouchableOpacity
+} from 'react-native';
 
 import moment from '../handlers/moment';
 import TimeBox from '../components/timebox';
 
 export default class Details extends Component {
+  static navigationOptions = ({ navigation }) => {
+    return {
+      headerLeft: (
+        <TouchableOpacity
+          style={styles.header}
+          onPress={() => navigation.goBack()}
+        >
+          <Icon name="arrow-left" size={20} style={styles.backIcon} />
+          <Text style={styles.backText}>Detalhes do evento</Text>
+        </TouchableOpacity>
+      ),
+      headerStyle: { height: 60, borderBottomColor: '#F2F2F2' }
+    };
+  };
+
   state = {
     event: null
   };
@@ -48,6 +71,18 @@ export default class Details extends Component {
 }
 
 const styles = StyleSheet.create({
+  header: {
+    marginLeft: 24,
+    flexDirection: 'row',
+    alignContent: 'center'
+  },
+  backIcon: {
+    marginRight: 32
+  },
+  backText: {
+    fontSize: 18,
+    fontFamily: 'sf-pro-display-medium'
+  },
   container: {
     flex: 1,
     backgroundColor: '#CCC'

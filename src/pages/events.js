@@ -27,6 +27,7 @@ export default class Events extends Component {
         <Text style={styles.title}>Eventos</Text>
       </View>
     ),
+    headerStyle: { height: 60, borderBottomColor: '#F2F2F2' },
     gesturesEnabled: false
   };
 
