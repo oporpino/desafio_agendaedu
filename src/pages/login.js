@@ -190,6 +190,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   buttonText: {
-    fontWeight: '600'
+    fontWeight: '600',
+    fontFamily: 'sf-pro-display-semibold'
   }
 });

@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
   },
   clockText: {
     alignContent: 'center',
-    color: '#666666'
+    color: '#666666',
+    fontFamily: 'sf-pro-display-regular'
   }
 });

@@ -24,6 +24,7 @@ exports[`<Group /> render all events 1`] = `
           },
           Object {
             "color": "#999999",
+            "fontFamily": "sf-pro-display-medium",
             "marginRight": 16,
           },
         ]

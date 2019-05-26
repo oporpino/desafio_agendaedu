@@ -82,21 +82,25 @@ const styles = StyleSheet.create({
   },
   day: {
     fontSize: 22,
-    color: '#733DBE'
+    color: '#733DBE',
+    fontFamily: 'sf-pro-display-bold'
   },
   month: {
     fontSize: 14,
-    color: '#733DBE'
+    color: '#733DBE',
+    fontFamily: 'sf-pro-text-regular'
   },
   title: {
     flex: 1,
     flexWrap: 'wrap',
     color: '#333333',
-    fontSize: 22
+    fontSize: 22,
+    fontFamily: 'sf-pro-display-bold'
   },
   descriptionBox: {
     color: '#666666',
     fontSize: 16,
-    lineHeight: 28
+    lineHeight: 28,
+    fontFamily: 'sf-pro-text-regular'
   }
 });

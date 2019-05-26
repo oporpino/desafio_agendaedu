@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
   },
   groupText: {
     color: '#999999',
-    marginRight: 16
+    marginRight: 16,
+    fontFamily: 'sf-pro-display-medium'
   }
 });

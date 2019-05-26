@@ -61,7 +61,8 @@ const styles = StyleSheet.create({
   },
   dateText: {
     color: '#999999',
-    fontSize: 12
+    fontSize: 12,
+    fontFamily: 'sf-pro-display-medium'
   },
   event: {
     backgroundColor: '#fff',
@@ -101,7 +102,8 @@ const styles = StyleSheet.create({
   },
   eventText: {
     color: '#999999',
-    marginBottom: 12
+    marginBottom: 12,
+    fontFamily: 'sf-pro-display-medium'
   },
   titleItem: {
     color: '#333333',
