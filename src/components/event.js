@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 import { Text } from 'native-base';
 import { View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
-import { Entypo as Icon } from '@expo/vector-icons';
-
+import TimeBox from '../components/timebox';
 import moment from '../handlers/moment';
 
 export default class Event extends Component {
@@ -31,10 +30,7 @@ export default class Event extends Component {
             <Text style={styles.eventText}>EVENTOS</Text>
             <Text style={styles.titleItem}>{props.item.title}</Text>
 
-            <View style={styles.clockGroup}>
-              <Icon name="clock" size={14} style={styles.clockIcon} />
-              <Text style={styles.clockText}>14:00</Text>
-            </View>
+            <TimeBox time={props.item.startAt} size={14} />
             <Text style={styles.dateText}>
               {moment(props.item.startAt)
                 .format('dddd, DD [de] MMMM [às] LT[h]')

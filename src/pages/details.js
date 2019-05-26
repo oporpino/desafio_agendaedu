@@ -4,6 +4,7 @@ import { Text } from 'native-base';
 import { Image, View, StyleSheet, Dimensions } from 'react-native';
 
 import moment from '../handlers/moment';
+import TimeBox from '../components/timebox';
 
 export default class Details extends Component {
   state = {
@@ -32,8 +33,10 @@ export default class Details extends Component {
                   .toUpperCase()}
               </Text>
             </View>
-
-            <Text style={styles.title}>{event.title}</Text>
+            <View>
+              <Text style={styles.title}>{event.title}</Text>
+              <TimeBox time={event.startAt} size={16} />
+            </View>
           </View>
           <View style={styles.secondRow}>
             <Text style={styles.descriptionBox}>{event.description}</Text>
