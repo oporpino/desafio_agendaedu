@@ -7,12 +7,11 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { common, messages } from '../styles/common';
 
-import api from '../services/api';
+import AgendaEdu from '../services/api';
 import adapter from 'axios/lib/adapters/http';
 
 export default class Login extends Component {
   state = {
-    token: null,
     message: null,
     email: null,
     password: null,
@@ -26,31 +25,20 @@ export default class Login extends Component {
 
   async componentDidMount() {
     const token = await AsyncStorage.getItem('user_token');
-
-    if (token != null) {
-      this.afterLogin();
-    }
+    this.afterLogin(token);
   }
 
   login = async () => {
     this.clear();
     try {
-      const response = await api.post(
-        '/login',
-        {
-          email: this.state.email,
-          password: this.state.password
-        },
-        { adapter }
+      const response = await AgendaEdu.authenticate(
+        this.state.email,
+        this.state.password
       );
-
-      this.setState({
-        message: response.data.token
-      });
 
       AsyncStorage.setItem('user_token', response.data.token);
 
-      this.afterLogin();
+      await this.afterLogin(response.data.token);
     } catch (error) {
       this.setState({
         message: 'E-mail ou senha incorretos'
@@ -58,8 +46,11 @@ export default class Login extends Component {
     }
   };
 
-  afterLogin = () => {
-    this.props.navigation.navigate('Events');
+  afterLogin = async token => {
+    if (token != null) {
+      AgendaEdu.initialize(token);
+      this.props.navigation.navigate('Events');
+    }
   };
 
   clear = () => {

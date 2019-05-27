@@ -33,8 +33,8 @@ describe('<Login />', () => {
 
   describe('when navigate', () => {
     let wrapper = null;
-    const mock = jest.fn(() => {
-      wrapper.instance().afterLogin();
+    const mock = jest.fn(async () => {
+      wrapper.instance().afterLogin('@123456');
     });
     const mockNavigate = jest.fn();
 
@@ -62,9 +62,9 @@ describe('<Login />', () => {
       expect(mock).toHaveBeenCalled();
     });
 
-    it('navigate to Main with valid attributes', () => {
+    it('navigate to Main with valid attributes', async () => {
       const button = wrapper.find('#loginButton').first();
-      button.instance().props.onPress();
+      await button.instance().props.onPress();
 
       expect(wrapper.instance().props.navigation.navigate).toHaveBeenCalledWith(
         'Events'

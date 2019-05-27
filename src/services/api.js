@@ -1,5 +1,6 @@
 import axios from 'axios';
 import moment from '../handlers/moment';
+import adapter from 'axios/lib/adapters/http';
 
 let _instance;
 
@@ -31,15 +32,24 @@ export default class AgendaEdu {
     });
   }
 
-  static async events(params) {
-    console.log(params);
+  async post(path, params) {
+    return await axios.post(this.baseURL + path, params, { adapter });
+  }
 
+  static async events(params) {
     if (params == undefined || params.limit == undefined) {
       throw new Error('you must to send needed parameters');
     }
     const result = await AgendaEdu.instance().get('/events', params);
 
     return result.data;
+  }
+
+  static async authenticate(email, password) {
+    return await AgendaEdu.instance().post('/login', {
+      email: email,
+      password: password
+    });
   }
 
   static combine(events, groups) {
