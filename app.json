@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Desafio Frontend - AgendaEdu",
-    "slug": "desafio_frontend",
+    "slug": "desafio_agendaedu",
     "privacy": "public",
     "sdkVersion": "32.0.0",
     "platforms": [
@@ -24,6 +24,7 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "The source code is at  https://gitlab.com/gporpino/desafio_agendaedu "
   }
 }
