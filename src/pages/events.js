@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { Text } from 'native-base';
-import { View, StyleSheet, AsyncStorage } from 'react-native';
+import { View, StyleSheet, AsyncStorage, TouchableOpacity } from 'react-native';
 
 import { Entypo as Icon } from '@expo/vector-icons';
 
@@ -11,6 +11,7 @@ import moment from '../handlers/moment';
 import Group from '../components/group';
 
 import AgendaEdu from '../services/api';
+import SideBarContainer from '../components/sidebar';
 
 export default class Events extends Component {
   state = {
@@ -20,26 +21,31 @@ export default class Events extends Component {
     metadata: null
   };
 
-  static navigationOptions = {
-    headerLeft: props => (
-      <View style={styles.header}>
-        <Icon name="menu" size={32} style={styles.menuIcon} />
-        <Text style={styles.title}>Eventos</Text>
-      </View>
-    ),
-    headerStyle: { height: 60, borderBottomColor: '#F2F2F2' },
-    gesturesEnabled: false
+  static navigationOptions = ({ navigation }) => {
+    return {
+      headerLeft: props => (
+        <TouchableOpacity
+          style={styles.header}
+          onPress={navigation.getParam('openMenu')}
+        >
+          <Icon name="menu" size={32} style={styles.menuIcon} />
+          <Text style={styles.title}>Eventos</Text>
+        </TouchableOpacity>
+      ),
+      headerStyle: { height: 60, borderBottomColor: '#F2F2F2' },
+      gesturesEnabled: false
+    };
   };
 
   componentDidMount() {
     this.loadEvents();
+    this.props.navigation.setParams({ openMenu: this._openMenu });
   }
+  _openMenu = () => {
+    this.refs.sidebar.toogleMenu();
+  };
 
   loadEvents = async (page = 1) => {
-    const token = await AsyncStorage.getItem('user_token');
-
-    AgendaEdu.initialize(token);
-
     const { data, metadata } = await AgendaEdu.events({
       limit: this.state.limit,
       page: page
@@ -65,15 +71,17 @@ export default class Events extends Component {
   render() {
     const groups = this.state.groups;
     return (
-      <View>
-        <FlatList
-          data={groups}
-          keyExtractor={item => item.day.toString()}
-          renderItem={this.renderItem}
-          onEndReached={this.loadMore}
-          onEndReachedThreshold={0.3}
-        />
-      </View>
+      <SideBarContainer ref="sidebar" navigation={this.props.navigation}>
+        <View>
+          <FlatList
+            data={groups}
+            keyExtractor={item => item.day.toString()}
+            renderItem={this.renderItem}
+            onEndReached={this.loadMore}
+            onEndReachedThreshold={0.3}
+          />
+        </View>
+      </SideBarContainer>
     );
   }
 }
