@@ -72,20 +72,25 @@ exports[`<Login /> inputs has login button 1`] = `
         <TextInput
           allowFontScaling={true}
           id="emailInput"
+          onBlur={[Function]}
           onChangeText={[Function]}
+          onFocus={[Function]}
           style={
-            Object {
-              "borderColor": "#733DBE",
-              "borderRadius": 5,
-              "borderWidth": 1,
-              "color": "#333333",
-              "fontFamily": "sf-pro-display-regular",
-              "height": 50,
-              "paddingBottom": 13,
-              "paddingLeft": 20,
-              "paddingRight": 20,
-              "paddingTop": 13,
-            }
+            Array [
+              Object {
+                "borderColor": "#ABB1B7",
+                "borderRadius": 5,
+                "borderWidth": 1,
+                "color": "#333333",
+                "fontFamily": "sf-pro-display-regular",
+                "height": 50,
+                "paddingBottom": 13,
+                "paddingLeft": 20,
+                "paddingRight": 20,
+                "paddingTop": 13,
+              },
+              null,
+            ]
           }
           underlineColorAndroid="transparent"
         />
@@ -133,21 +138,26 @@ exports[`<Login /> inputs has login button 1`] = `
         <TextInput
           allowFontScaling={true}
           id="passwordInput"
+          onBlur={[Function]}
           onChangeText={[Function]}
+          onFocus={[Function]}
           secureTextEntry={true}
           style={
-            Object {
-              "borderColor": "#ABB1B7",
-              "borderRadius": 5,
-              "borderWidth": 1,
-              "color": "#333333",
-              "fontFamily": "sf-pro-display-regular",
-              "height": 50,
-              "paddingBottom": 13,
-              "paddingLeft": 20,
-              "paddingRight": 20,
-              "paddingTop": 13,
-            }
+            Array [
+              Object {
+                "borderColor": "#ABB1B7",
+                "borderRadius": 5,
+                "borderWidth": 1,
+                "color": "#333333",
+                "fontFamily": "sf-pro-display-regular",
+                "height": 50,
+                "paddingBottom": 13,
+                "paddingLeft": 20,
+                "paddingRight": 20,
+                "paddingTop": 13,
+              },
+              null,
+            ]
           }
           underlineColorAndroid="transparent"
         />
@@ -279,20 +289,25 @@ exports[`<Login /> inputs has login input 1`] = `
         <TextInput
           allowFontScaling={true}
           id="emailInput"
+          onBlur={[Function]}
           onChangeText={[Function]}
+          onFocus={[Function]}
           style={
-            Object {
-              "borderColor": "#733DBE",
-              "borderRadius": 5,
-              "borderWidth": 1,
-              "color": "#333333",
-              "fontFamily": "sf-pro-display-regular",
-              "height": 50,
-              "paddingBottom": 13,
-              "paddingLeft": 20,
-              "paddingRight": 20,
-              "paddingTop": 13,
-            }
+            Array [
+              Object {
+                "borderColor": "#ABB1B7",
+                "borderRadius": 5,
+                "borderWidth": 1,
+                "color": "#333333",
+                "fontFamily": "sf-pro-display-regular",
+                "height": 50,
+                "paddingBottom": 13,
+                "paddingLeft": 20,
+                "paddingRight": 20,
+                "paddingTop": 13,
+              },
+              null,
+            ]
           }
           underlineColorAndroid="transparent"
         />
@@ -340,21 +355,26 @@ exports[`<Login /> inputs has login input 1`] = `
         <TextInput
           allowFontScaling={true}
           id="passwordInput"
+          onBlur={[Function]}
           onChangeText={[Function]}
+          onFocus={[Function]}
           secureTextEntry={true}
           style={
-            Object {
-              "borderColor": "#ABB1B7",
-              "borderRadius": 5,
-              "borderWidth": 1,
-              "color": "#333333",
-              "fontFamily": "sf-pro-display-regular",
-              "height": 50,
-              "paddingBottom": 13,
-              "paddingLeft": 20,
-              "paddingRight": 20,
-              "paddingTop": 13,
-            }
+            Array [
+              Object {
+                "borderColor": "#ABB1B7",
+                "borderRadius": 5,
+                "borderWidth": 1,
+                "color": "#333333",
+                "fontFamily": "sf-pro-display-regular",
+                "height": 50,
+                "paddingBottom": 13,
+                "paddingLeft": 20,
+                "paddingRight": 20,
+                "paddingTop": 13,
+              },
+              null,
+            ]
           }
           underlineColorAndroid="transparent"
         />
@@ -486,20 +506,25 @@ exports[`<Login /> inputs has password input 1`] = `
         <TextInput
           allowFontScaling={true}
           id="emailInput"
+          onBlur={[Function]}
           onChangeText={[Function]}
+          onFocus={[Function]}
           style={
-            Object {
-              "borderColor": "#733DBE",
-              "borderRadius": 5,
-              "borderWidth": 1,
-              "color": "#333333",
-              "fontFamily": "sf-pro-display-regular",
-              "height": 50,
-              "paddingBottom": 13,
-              "paddingLeft": 20,
-              "paddingRight": 20,
-              "paddingTop": 13,
-            }
+            Array [
+              Object {
+                "borderColor": "#ABB1B7",
+                "borderRadius": 5,
+                "borderWidth": 1,
+                "color": "#333333",
+                "fontFamily": "sf-pro-display-regular",
+                "height": 50,
+                "paddingBottom": 13,
+                "paddingLeft": 20,
+                "paddingRight": 20,
+                "paddingTop": 13,
+              },
+              null,
+            ]
           }
           underlineColorAndroid="transparent"
         />
@@ -547,21 +572,26 @@ exports[`<Login /> inputs has password input 1`] = `
         <TextInput
           allowFontScaling={true}
           id="passwordInput"
+          onBlur={[Function]}
           onChangeText={[Function]}
+          onFocus={[Function]}
           secureTextEntry={true}
           style={
-            Object {
-              "borderColor": "#ABB1B7",
-              "borderRadius": 5,
-              "borderWidth": 1,
-              "color": "#333333",
-              "fontFamily": "sf-pro-display-regular",
-              "height": 50,
-              "paddingBottom": 13,
-              "paddingLeft": 20,
-              "paddingRight": 20,
-              "paddingTop": 13,
-            }
+            Array [
+              Object {
+                "borderColor": "#ABB1B7",
+                "borderRadius": 5,
+                "borderWidth": 1,
+                "color": "#333333",
+                "fontFamily": "sf-pro-display-regular",
+                "height": 50,
+                "paddingBottom": 13,
+                "paddingLeft": 20,
+                "paddingRight": 20,
+                "paddingTop": 13,
+              },
+              null,
+            ]
           }
           underlineColorAndroid="transparent"
         />

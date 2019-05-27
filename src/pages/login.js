@@ -15,7 +15,9 @@ export default class Login extends Component {
     message: null,
     email: null,
     password: null,
-    loginPassed: false
+    loginPassed: false,
+    styleEmail: null,
+    stylePassword: null
   };
 
   static navigationOptions = {
@@ -59,6 +61,38 @@ export default class Login extends Component {
     });
   };
 
+  onBlurEmail() {
+    this.setState({
+      styleEmail: {
+        borderColor: '#ABB1B7'
+      }
+    });
+  }
+
+  onFocusEmail() {
+    this.setState({
+      styleEmail: {
+        borderColor: '#733DBE'
+      }
+    });
+  }
+
+  onBlurPassword() {
+    this.setState({
+      stylePassword: {
+        borderColor: '#ABB1B7'
+      }
+    });
+  }
+
+  onFocusPassword() {
+    this.setState({
+      stylePassword: {
+        borderColor: '#733DBE'
+      }
+    });
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -72,7 +106,9 @@ export default class Login extends Component {
             <View sytle={styles.inputIconGroup}>
               <TextInput
                 id="emailInput"
-                style={styles.emailInput}
+                style={[styles.emailInput, this.state.styleEmail]}
+                onBlur={() => this.onBlurEmail()}
+                onFocus={() => this.onFocusEmail()}
                 onChangeText={email => this.setState({ email })}
               />
               <MaterialCommunityIcons
@@ -88,7 +124,9 @@ export default class Login extends Component {
               <TextInput
                 id="passwordInput"
                 secureTextEntry={true}
-                style={styles.passwordInput}
+                style={[styles.passwordInput, this.state.stylePassword]}
+                onBlur={() => this.onBlurPassword()}
+                onFocus={() => this.onFocusPassword()}
                 onChangeText={password => this.setState({ password })}
               />
               <MaterialCommunityIcons
@@ -152,7 +190,7 @@ const styles = StyleSheet.create({
   emailInput: {
     ...common.textInput,
 
-    borderColor: '#733DBE'
+    borderColor: '#ABB1B7'
   },
   passwordInput: {
     ...common.textInput,
