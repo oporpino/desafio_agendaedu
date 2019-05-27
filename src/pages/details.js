@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 
 import { Text } from 'native-base';
+
 import { Feather as Icon } from '@expo/vector-icons';
+
+import Wall from '../components/wall';
 
 import {
   Image,
@@ -30,47 +33,49 @@ export default class Details extends Component {
     };
   };
 
-  state = {
-    event: null
-  };
-
-  componetDidMount() {}
-
   render() {
     const { navigation } = this.props;
+
     const event = navigation.getParam('event', null);
 
     return (
       <View style={styles.container}>
         <Image style={styles.image} source={{ uri: event.image }} />
-
-        <View style={styles.content}>
-          <View style={styles.firstRow}>
-            <View style={styles.dateBox}>
-              <Text style={styles.day}>
-                {moment(event.startAt).format('DD')}
-              </Text>
-              <Text style={styles.month}>
-                {moment(event.startAt)
-                  .format('MMM')
-                  .toUpperCase()}
-              </Text>
+        <Wall style={styles.wall}>
+          <View style={styles.content}>
+            <View style={styles.firstRow}>
+              <View style={styles.dateBox}>
+                <Text style={styles.day}>
+                  {moment(event.startAt).format('DD')}
+                </Text>
+                <Text style={styles.month}>
+                  {moment(event.startAt)
+                    .format('MMM')
+                    .toUpperCase()}
+                </Text>
+              </View>
+              <View>
+                <Text style={styles.title}>{event.title}</Text>
+                <TimeBox time={event.startAt} size={16} />
+              </View>
             </View>
-            <View>
-              <Text style={styles.title}>{event.title}</Text>
-              <TimeBox time={event.startAt} size={16} />
+            <View style={styles.secondRow}>
+              <Text style={styles.descriptionBox}>{event.description}</Text>
             </View>
           </View>
-          <View style={styles.secondRow}>
-            <Text style={styles.descriptionBox}>{event.description}</Text>
-          </View>
-        </View>
+        </Wall>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  wall: {
+    position: 'absolute',
+
+    bottom: -1 * (Dimensions.get('window').height / 5) * 4,
+    width: Dimensions.get('window').width
+  },
   header: {
     marginLeft: 24,
     flexDirection: 'row',
@@ -96,10 +101,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF',
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
-    marginTop: -20,
+
     paddingLeft: 32,
     paddingRight: 32,
-    paddingTop: 32
+    paddingTop: 32,
+    paddingBottom: Dimensions.get('window').height,
+    marginTop: Dimensions.get('window').height / 2
   },
   firstRow: {
     flexDirection: 'row',
