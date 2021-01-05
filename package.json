@@ -13,7 +13,7 @@
     "update:snapshots": "jest -u --coverage=false"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "expo": "^32.0.0",
     "jest": "^24.8.0",
     "jest-serializer-enzyme": "^1.0.0",
